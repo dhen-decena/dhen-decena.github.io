@@ -4,9 +4,13 @@
 
 body {
   margin: 0;
-  background-image: linear-gradient(to bottom, #FEFEFEff, #CFECF4ff);
-  color: #222;
+  color: #222; 
   font-family: "Helvetica Neue", Arial, sans-serif;
+  background-image: url('https://grafismasakini.com/uploads/2025/07/270a47404a1eadca542fb12c1d74234f_1ee6ed2e2090e92a578a083b3022bcd4.jpg.webp?v=1751625627');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(2px);
 }
 
 #all-contents {
@@ -28,16 +32,22 @@ main {
 }
 
 .content {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   align-items: flex-start;
   gap: 12px;
-}
+  border: 1px solid #fff;
+  border-radius: 12px;
+  padding: 50px 24px;
+  background-color: #fff;
+  box-shadow: 0 8px 30px #78e697ff;
 
+}
+ 
 h2 {
   margin: 0;
   font-size: clamp(3rem, 1vw, 1rem);
-  line-height: 0.9;
+  line-height: 1;
   font-weight: 1000;
   letter-spacing: -0.05em;
   text-transform: uppercase;
@@ -51,7 +61,7 @@ h2 {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  line-height: 0.3;
+  line-height: 0.5;
 }
 
 #interests {
@@ -61,7 +71,7 @@ h2 {
 
 #interests h3 {
   margin: 0 0 12px;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -95,7 +105,7 @@ h2 {
 #interests li:hover {
   background-image: linear-gradient(to bottom, #78e697ff, #34c759ff,#E7EFD6ff);
   color: #fff;
-  border: 1px solid #1061faff;
+  border: 2px solid #34c759ff;
   transform: translateY(-2px);
 }
 
@@ -107,7 +117,7 @@ h2 {
   display: block;
   border-radius: 16px;
   filter: blur(5px) grayscale(40%);
-  box-shadow: 0 8px 30px rgb(1, 145, 155);
+  box-shadow: 0 8px 30px #78e697ff;
   transition:
     filter 0.4s ease,
     transform 0.4s ease,
@@ -117,7 +127,7 @@ h2 {
 .sidebar-img:hover{
   filter: grayscale(0%);
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px #22CED5ff;
+  box-shadow: 0 16px 40px #78e697ff;
 }
 
 nav {
