@@ -240,7 +240,7 @@ nav h1{
   color: #2994ABff;
 }
 
-#portfolio a {
+#portfolio a:link {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -259,6 +259,11 @@ nav h1{
     background 0.25s ease,
     color 0.25s ease,
     transform 0.25s ease;
+}
+
+#portfolio a:visited {
+  color:#225479ff;
+  border: 2px solid #087E8B;
 }
 
 
@@ -280,4 +285,42 @@ nav h1{
 
 #portfolio a:hover::after {
  opacity: 1; 
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.portfolio-img{
+  width: 100%;
+  max-width: 490px;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px #78e697ff;
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.portfolio-img:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px #78e697ff;
+
 }
