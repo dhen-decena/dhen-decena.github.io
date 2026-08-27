@@ -274,7 +274,32 @@ nav h1{
   transform: translateX(4px);
 }
 
+.btn-completed::after {
+  content: "after";
+  position: absolute;
+  text-align: center;
+  
+  transition: opacity 0.25s ease,
+    all 400ms;
+  white-space: nowrap;
+  top: 0;
+}
 
+.btn.btn-completed:hover::after {
+  top:-36px;
+}
+
+.btn-completed::before {
+  content:"COMPLETED";
+  top:36px;
+}
+
+.btn.btn-completed:hover::before {
+  top:0;
+}
+
+
+/*
 #portfolio a::after {
   content: "->";
   font-size: 0.85rem;
@@ -285,6 +310,18 @@ nav h1{
 
 #portfolio a:hover::after {
  opacity: 1; 
+}
+*/
+
+
+
+/*
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
 }
 
 .tooltiptext {
@@ -305,6 +342,7 @@ nav h1{
   visibility: visible;
 }
 
+*/
 
 .portfolio-img{
   width: 100%;
