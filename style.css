@@ -15,6 +15,8 @@ body {
   backdrop-filter: blur(2px);
 }
 
+/* or https://wallpapers-clan.com/wp-content/uploads/2025/12/frutiger-aero-dreamscape-aesthetic-wallpaper-preview.jpg */
+
 #all-contents {
   max-width: 1500px;
   min-height: 100vh;
@@ -140,7 +142,7 @@ nav {
   padding: 16px 24px;
   background-image: linear-gradient(to bottom, #78e697ff, #34c759ff, #E7EFD6ff); 
   border: 1px solid #CFECF4ff;
-  border-radius: 12px;
+  border-radius: 90px;
 }
 
 nav h1{
@@ -171,6 +173,17 @@ nav h1{
   transition:
     background 0.25s ease,
     color 0.25s ease;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.image-gallery img {
+  width: 100px;
+  height:90px;
+  object-fit: cover;
 }
 
 .nav-li a:hover {
@@ -240,6 +253,8 @@ nav h1{
   color: #2994ABff;
 }
 
+
+
 #portfolio a:link {
   position: relative;
   display: flex;
@@ -274,32 +289,58 @@ nav h1{
   transform: translateX(4px);
 }
 
-.btn-completed::after {
-  content: "after";
+
+/*
+.button-container{
+  margin-bottom: 0;
+
+}
+
+.btn {
+  display: inline-block;
+  background: #BDEEFC;
+  text-decoration: none;
+  width: 160px;
+  height: 42px;
+  margin: 24px 0;
+  border-radius: 10px;
+  
+  position:relative;
+  
+}
+
+.btn.test-completed::after {
+  content: "TEST";
   position: absolute;
   text-align: center;
+  width:100%;
+  font-weight:bold;
+  color:#fff;
   
   transition: opacity 0.25s ease,
     all 400ms;
   white-space: nowrap;
   top: 0;
+  line-height: 2.5;
+
 }
 
-.btn.btn-completed:hover::after {
+.btn.btn.test-completed:hover::after {
   top:-36px;
 }
 
-.btn-completed::before {
+.btn.test-completed::before {
   content:"COMPLETED";
   top:36px;
 }
 
-.btn.btn-completed:hover::before {
+.btn.btn.test-completed:hover::before {
   top:0;
 }
 
+*/
 
-/*
+
 #portfolio a::after {
   content: "->";
   font-size: 0.85rem;
@@ -311,7 +352,7 @@ nav h1{
 #portfolio a:hover::after {
  opacity: 1; 
 }
-*/
+
 
 
 
@@ -362,3 +403,53 @@ nav h1{
   box-shadow: 0 16px 40px #78e697ff;
 
 }
+
+/*responsive web design
+@media screen and (min-width: 120px) and (max-width: 1080px) {
+  main {
+    height: 100ch;
+    zoom: 1.5;
+    display: grid;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
+
+  #all-contents {
+    height: 100ch;
+    margin: none;
+  }
+
+  a {
+    font-size: 42px;
+  }
+
+  .sidebar {
+    margin-right: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar-img {
+    width: 100%;
+  }
+
+  p,
+  li {
+    font-size: 24px;
+  }
+
+  .content {
+    align-content: center;
+    justify-content: center;
+  }
+} */
