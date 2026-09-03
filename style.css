@@ -10,7 +10,7 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   background-image: url('https://grafismasakini.com/uploads/2025/07/270a47404a1eadca542fb12c1d74234f_1ee6ed2e2090e92a578a083b3022bcd4.jpg.webp?v=1751625627');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: center;
   backdrop-filter: blur(2px);
 }
@@ -255,8 +255,7 @@ nav h1{
 
 
 
-#portfolio a:link {
-  position: relative;
+#portfolio a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -275,6 +274,7 @@ nav h1{
     color 0.25s ease,
     transform 0.25s ease;
 }
+
 
 #portfolio a:visited {
   color:#225479ff;
@@ -353,6 +353,8 @@ nav h1{
  opacity: 1; 
 }
 
+
+/*
 .third-page.content {
   display: flex;  
   flex-direction: column;
@@ -364,8 +366,6 @@ nav h1{
   background-color: #fff;
   box-shadow: 0 8px 30px #78e697ff;
 }
-
-/*
 
 .tooltip {
   position: relative;
@@ -391,8 +391,8 @@ nav h1{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-
 */
+
 
 .portfolio-img{
   width: 100%;
