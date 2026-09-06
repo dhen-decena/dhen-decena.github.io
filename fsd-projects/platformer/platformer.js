@@ -52,11 +52,9 @@ $(function () {
     createCollectable("diamond", 0, 130, 0,);
     createCollectable("database", 25, 650, 0);
     createCollectable("diamond", 950, 140 , 0);
-    createCollectable("grace", 300, 170, 0.5, 0.7);
-    createCollectable("kennedi", 350, 170, 0.5, 0.7);
-    createCollectable("max", 450, 170, 0.5, 0.7);
-    createCollectable("steve", 500, 170, 0.5, 0.7);
 
+    createCollectable("database", 702, 310 , 0);
+    createCollectable("database", 1325, 600 , 0);
 
     
     // TODO 4 - Create Cannons
