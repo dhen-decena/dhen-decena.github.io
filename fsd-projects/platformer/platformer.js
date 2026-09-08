@@ -31,20 +31,33 @@ $(function () {
 
 
     // TODO 2 - Create Platforms
-    createPlatform(0, 600, 300, 20, "blue");
-    createPlatform(350, 670, 150, 20, "blue");
 
-    createPlatform(430, 230, 350, 15, "blue");
-    createPlatform(650, 360, 150, 15, "blue");
+    // left 2
+    createPlatform(150, 600, 100, 15, "yellow", 150, 300, 2, 600, 600, 0);
+    createPlatform(0, 600, 300, 20, "blue");
+    createPlatform(350, 670, 100, 20, "blue");
+
+    //right
+    createPlatform(650, 360, 170, 15, "blue");
     createPlatform(970, 450, 20, 10, "blue");
     createPlatform(950, 540, 300, 15, "blue");
     createPlatform(1200, 650, 300, 15, "blue");
 
-    createPlatform(0, 500, 20, 10, "blue");
-    createPlatform(0, 400, 20, 10, "blue");
-    createPlatform(0, 300, 20, 10, "blue");
-    createPlatform(0, 200, 20, 10, "blue");
+    // mini platforms
+    createPlatform(0, 500, 35, 10, "green");
+    createPlatform(0, 400, 30, 10, "green");
+    createPlatform(0, 300, 25, 10, "green");
+    createPlatform(0, 200, 20, 10, "green");
 
+    // createBadPlatform(650, 720, 20, 10, "red");
+    // createBadPlatform(750, 720, 20, 10, "red");
+
+    createPlatform(650, 500, 20, 10, "yellow", 650, 650, 500, 700, 0);
+
+    // kill blocks
+    createBadPlatform(650, 720, 20, 10, "red");
+    createBadPlatform(750, 720, 20, 10, "red");
+    createBadPlatform(950, 555, 100, 5, "red");
 
 
     // TODO 3 - Create Collectables
@@ -59,6 +72,11 @@ $(function () {
     
     // TODO 4 - Create Cannons
 
+      createCannon("right", 120, 1500);
+      createCannon("bottom", 450, 1400);
+      // createCannon("top", 930, 1200);
+      createCannon("top", 1200, 1700, 20, 20, 1100, 1400, 3);
+      // for sm reason last function is wrong
 
     
     
