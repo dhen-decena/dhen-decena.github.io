@@ -1,6 +1,7 @@
 body {
   margin: 0px;
-  background-color: #202737;
+  background-image: linear-gradient(to bottom, #BDEEFC, #2994ABff, #a8e6ffff); 
+  /* background-image: linear-gradient(to bottom, #78e697ff, #34c759ff,#E7EFD6ff); */
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,10 +9,13 @@ body {
 }
 
 canvas {
-  background-color: lightblue;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20251110/pngtree-underwater-coral-reef-scene-simple-neutral-background-with-free-space-for-image_19922248.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   margin: 20px;
   border-radius: 15px;
-  border: 5px solid rgba(118, 0, 233, 0.375);
+  border: 5px solid #2994ABff;
 }
 
 img {
