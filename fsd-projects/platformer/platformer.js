@@ -33,7 +33,7 @@ $(function () {
     // TODO 2 - Create Platforms
 
     // left 2
-    createPlatform(150, 600, 100, 15, "yellow", 150, 300, 2, 600, 600, 0);
+    createPlatform(150, 600, 100, 20, "yellow", 150, 300, 2, 600, 600, 0);
     createPlatform(0, 600, 300, 20, "blue");
     createPlatform(350, 670, 100, 20, "blue");
 
@@ -52,11 +52,13 @@ $(function () {
     // createBadPlatform(650, 720, 20, 10, "red");
     // createBadPlatform(750, 720, 20, 10, "red");
 
-    createPlatform(650, 500, 20, 10, "yellow", 650, 650, 500, 700, 0);
+    createPlatform(650, 600, 20, 150, "yellow", 650, 650, 0, 600, 750, 1);
+    createPlatform(750, 650, 20, 150, "yellow", 750, 750, 0, 600, 750, 1);
+    createPlatform(400, 300, 40, 10, "yellow", 400, 500, 0, 300, 500, 1);
 
     // kill blocks
-    createBadPlatform(650, 720, 20, 10, "red");
-    createBadPlatform(750, 720, 20, 10, "red");
+    createBadPlatform(650, 500, 20, 100, "red");
+    createBadPlatform(750, 500, 20, 100, "red");
     createBadPlatform(950, 555, 100, 5, "red");
 
 
