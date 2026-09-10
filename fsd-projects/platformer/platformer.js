@@ -66,15 +66,14 @@ $(function () {
 
     // TODO 3 - Create Collectables
     // createCollectable();
-    createCollectable("clownfish", 0, 130, 0,);
-    createCollectable("clownfish", 25, 650, 0);
+    createCollectable("cd", 5, 130, 0,);
+    createCollectable("icon", 25, 650, 0);
     createCollectable("clownfish", 950, 140 , 0);
 
     createCollectable("clownfish", 702, 310 , 0);
-    createCollectable("clownfish", 1325, 600 , 0);
+    createCollectable("cd", 1325, 600 , 0);
 
-    createCollectable("clownfish", 1325, 600 , 0);
-    createCollectable("clownfish", 350, 50 , 0);
+    createCollectable("clownfish", 320, 50 , 0, 1, 320, 420, 1);
 
     
     // TODO 4 - Create Cannons
