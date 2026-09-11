@@ -27,13 +27,13 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-    toggleGrid();
+    // toggleGrid();
 
 
     // TODO 2 - Create Platforms
 
     // left 2
-    createPlatform(150, 600, 100, 20, "yellow", 150, 300, 2, 600, 600, 0);
+    createPlatform(150, 600, 100, 20, "#a8e6ffff", 150, 300, 2, 600, 600, 0);
     createPlatform(0, 600, 300, 20, "blue");
     createPlatform(350, 670, 100, 20, "blue");
 
@@ -44,18 +44,18 @@ $(function () {
     createPlatform(1200, 650, 300, 15, "blue");
 
     // mini platforms
-    createPlatform(0, 500, 35, 10, "green");
-    createPlatform(0, 400, 30, 10, "green");
-    createPlatform(0, 300, 25, 10, "green");
-    createPlatform(0, 200, 20, 10, "green");
+    createPlatform(0, 500, 35, 10, "#D9732Bff");
+    createPlatform(0, 400, 30, 10, "#D9732Bff");
+    createPlatform(0, 300, 25, 10, "#D9732Bff");
+    createPlatform(0, 200, 20, 10, "#D9732Bff");
 
     // createBadPlatform(650, 720, 20, 10, "red");
     // createBadPlatform(750, 720, 20, 10, "red");
 
-    createPlatform(650, 600, 20, 150, "yellow", 650, 650, 0, 600, 750, 1);
-    createPlatform(750, 650, 20, 150, "yellow", 750, 750, 0, 600, 750, 1);
+    createPlatform(650, 600, 20, 150, "#78e697ff", 650, 650, 0, 600, 750, 1);
+    createPlatform(750, 650, 20, 150, "#78e697ff", 750, 750, 0, 600, 750, 1);
 
-    createPlatform(360, 170, 40, 10, "yellow", 360, 360, 0, 170, 500, 2);
+    createPlatform(360, 170, 40, 10, "#a8e6ffff", 360, 360, 0, 170, 530, 2);
     
 
     // kill blocks
@@ -69,11 +69,9 @@ $(function () {
     createCollectable("cd", 5, 130, 0,);
     createCollectable("icon", 25, 650, 0);
     createCollectable("clownfish", 950, 140 , 0);
-
-    createCollectable("clownfish", 702, 310 , 0);
+    createCollectable("clownfish", 360, 50 , 0, 1);
     createCollectable("cd", 1325, 600 , 0);
-
-    createCollectable("clownfish", 320, 50 , 0, 1, 320, 420, 1);
+    createCollectable("clownfish", 630, 310 , 0, 1, 630, 800, 1);
 
     
     // TODO 4 - Create Cannons
