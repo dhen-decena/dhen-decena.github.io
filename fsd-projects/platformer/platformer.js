@@ -73,6 +73,23 @@ $(function () {
     createCollectable("cd", 1325, 600 , 0);
     createCollectable("clownfish", 630, 310 , 0, 1, 630, 800, 1);
 
+      // let x = 1;
+      // while "clownfish" === 630 {
+      //   x -= 1;
+      // }
+
+      // while "clownfish" === 800 {
+      //   x += 1;
+      // }
+
+      // if x <2 {
+        
+      // }
+
+
+ 
+  
+
     
     // TODO 4 - Create Cannons
 
