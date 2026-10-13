@@ -6,11 +6,16 @@
     <script src="jquery.min.js"></script>
     <style>
       .box {
-        width: 70px;
-        height: 70px;
-        background-color: teal;
-        font-size: 300%;
+        width: 100px;
+        height: 100px;
+        /* background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/960px-DVD_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-blend-mode:overlay; */
+        font-size: 170%;
         text-align: center;
+        color: #fff;  
         user-select: none;
         display: block;
         position: absolute;
@@ -21,6 +26,7 @@
 
       .board {
         height: 100vh;
+        background-color: navy;
       }
     </style>
     <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -77,8 +83,10 @@
           
           var positionY = 0;
           var speedY = 10;
-          var randNum = Math.random() * 100;
 
+     
+
+          
 
 
         /**
@@ -110,13 +118,40 @@
          * - increase the speed
          * - move the box to the left side of the screen.
          */
-        function handleBoxClick() {
-          positionX = randNum;
-          positionY = randNum;
-          points++;
-          speed = 3 * points + 10;
-          changeBoxText(points);
+        function getRandomColor(){
+          var randColorValue = Math.random() * 10;
+          var colorStr = "rgb((randColorValue), (randColorValue), (randColorValue))";
+          box.css("background-color", colorStr);
+          }
 
+        function getRandomValue(min, max){
+          
+        }
+
+          // minmax 0-255 for values of rgb
+          // use sample code: 
+          // function getRandomIntInclusive(min, max) {
+          // const minCeiled = Math.ceil(min);
+          // const maxFloored = Math.floor(max);
+          // return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive } ?
+
+     
+        function handleBoxClick() {
+          getRandomColor();
+          var randValue = Math.floor(Math.random() * 10)
+
+          positionX = Math.floor(Math.random() * boardWidth);
+          positionY = Math.floor(Math.random() * boardHeight);
+          points++;
+          
+          if (randValue >= 5){
+            speed = (3 * points + 10) * -1;
+          } else {
+            speed = (3 * points + 10);
+          }
+
+          changeBoxText(points);
+          
         }
 
 
