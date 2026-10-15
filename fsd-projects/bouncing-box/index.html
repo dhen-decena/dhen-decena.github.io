@@ -10,21 +10,24 @@
       width: 100px;
       height: 100px;
 
-      background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/960px-DVD_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail);
+      
+      /* background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/960px-DVD_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-blend-mode:overlay;
+        background-blend-mode:screen;  */
+
+      background-color: #fff;
 
       font-size: 170%;
       text-align: center;
-      color: #fff;
+      color: gray;
       user-select: none;
       display: block;
       position: absolute;
       top: 100px;
       /* Change me! */
-      left: 0px;
+      left: 100px;
     }
 
     .board {
@@ -74,7 +77,8 @@
       function changeBoxText(newText) {
         box.text(newText);
       }
-
+      
+  
       //////////////////////////////////////////////////////////////////
       /////////////////// YOUR CODE BELOW HERE /////////////////////////
       //////////////////////////////////////////////////////////////////
@@ -87,7 +91,7 @@
       var positionY = 0;
       var speedY = 10;
 
-
+      var colorStr;
 
 
 
@@ -97,6 +101,7 @@
        * Each time it is called, it should move the Box to a new location.
        * If the box drifts off the screen, turn it around!
        */
+
       function update() {
         positionX = positionX + speed;
         positionY = positionY + speedY;
@@ -114,16 +119,10 @@
           speedY *= -1;
         }
       }
-      /**
-       * This Function will be called each time the box is clicked.
-       * Each time it is called, it should perform each of the following actions:
-       * - increase the points total
-       * - increase the speed
-       * - move the box to the left side of the screen.
-       */
+
       
 
-      function getRandomValue() {
+      function getRandomValue(randVal) {
         const minCeiled = Math.ceil(0);
         const maxFloored = Math.floor(255);
         var randVal = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
@@ -140,17 +139,35 @@
 
 
       function getRandomColor() {
+        // 3 diff values for color string rgb
+
+        var valOne = getRandomValue(0, 255);
+        var valTwo = getRandomValue(0, 255);
+        var valThr = getRandomValue(0, 255);
         var colorStr = "rgb(" + valOne + ", " + valTwo + ", " + valThr + ")";
+        // var colorStr = "rgb(50, 25, 250)";
         return colorStr;
         box.css("background-color", colorStr);
-
       }
 
+
+      /**
+       * This Function will be called each time the box is clicked.
+       * Each time it is called, it should perform each of the following actions:
+       * - increase the points total
+       * - increase the speed
+       * - move the box to the left side of the screen.
+       */
+      
       function handleBoxClick() {
 
         positionX = Math.floor(Math.random() * boardWidth);
         positionY = Math.floor(Math.random() * boardHeight);
         points++;
+
+        // random change of direction
+
+        var randValue = Math.floor(Math.random() * 10);
 
         if (randValue >= 5) {
           speed = (3 * points + 10) * -1;
@@ -158,11 +175,7 @@
           speed = (3 * points + 10);
         }
 
-        var valOne = getRandomValue(0, 255);
-        var valTwo = getRandomValue(0, 255);
-        var valThr = getRandomValue(0, 255);
-
-        var colorStr
+        
 
         changeBoxText(points);
         getRandomColor();
