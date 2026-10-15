@@ -7,21 +7,23 @@
   <script src="jquery.min.js"></script>
   <style>
     .box {
-      width: 100px;
-      height: 100px;
+      width: 115px;
+      height: 115px;
 
       
-      /* background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/960px-DVD_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail);
+      background-image: url(https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DVD_logo.svg/960px-DVD_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-blend-mode:screen;  */
+        background-blend-mode:overlay;
 
-      background-color: #fff;
+     git
 
       font-size: 170%;
       text-align: center;
-      color: gray;
+      color: white;
+
+
       user-select: none;
       display: block;
       position: absolute;
@@ -32,7 +34,11 @@
 
     .board {
       height: 100vh;
-      background-color: navy;
+      background-image: url(https://www.shutterstock.com/image-illustration/monochrome-television-static-faint-horizontal-260nw-2710423463.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      backdrop-filter: blur(100px) opacity(70%);
     }
   </style>
   <!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -94,8 +100,6 @@
       var colorStr;
 
 
-
-
       /**
        * This Function will be called 20 times/second.
        * Each time it is called, it should move the Box to a new location.
@@ -120,13 +124,9 @@
         }
       }
 
-      
 
-      function getRandomValue(randVal) {
-        const minCeiled = Math.ceil(0);
-        const maxFloored = Math.floor(255);
-        var randVal = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-        return randVal;
+      function getRandomValue() {
+        return Math.floor(Math.random() * 256);
       }
 
 
@@ -141,13 +141,15 @@
       function getRandomColor() {
         // 3 diff values for color string rgb
 
-        var valOne = getRandomValue(0, 255);
-        var valTwo = getRandomValue(0, 255);
-        var valThr = getRandomValue(0, 255);
+        var valOne = getRandomValue();
+        var valTwo = getRandomValue();
+        var valThr = getRandomValue();
+
         var colorStr = "rgb(" + valOne + ", " + valTwo + ", " + valThr + ")";
         // var colorStr = "rgb(50, 25, 250)";
-        return colorStr;
+        
         box.css("background-color", colorStr);
+        return colorStr;
       }
 
 
@@ -175,12 +177,9 @@
           speed = (3 * points + 10);
         }
 
-        
-
+    
         changeBoxText(points);
         getRandomColor();
-
-
       }
 
 
